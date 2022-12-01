@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Lato&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #411e05;
+    /* Zoom navegador */
+    zoom: 105%;
+}
+
+.hero {
+    /* Quitar opacidad background */
+    background-image: url(../img/PRUEBA1.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.hero__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 2rem 0 2rem;  /* Sin padding BOTTOM */
+}
+
+.hero__header .logo {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+.hero__header .logo i {
+    font-size: 2.5rem;
+    margin-right: 0.5rem;
+}
+
+.header__right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
+}
+
+.header__right p {
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+}
+
+.header__right p i {
+    margin-right: 0.5rem;
+}
+
+.header__right .menu {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 300;
+    display: flex;
+    list-style: none;
+    font-size: 1.4rem;
+    gap: 2rem;
+    letter-spacing: 2px;
+}
+
+.hero__main {
+    display: flex;
+    padding-inline: 6rem;
+}
+
+.hero__main > div {
+    flex: 1;  /* Para que se ajusten al 50% */
+}
+
+.hero__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero__text h4{
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 300;
+    font-size: 1.2rem;
+    border: 2px dashed #411e05;
+    width: max-content;  /* Para que se ajuste al texto */
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+}
+
+.hero__text h2 {
+    font-family: 'Alfa Slab One', cursive;
+    font-weight: 400;
+    font-size: 5rem;
+    line-height: 1; /* Para que no haya espacio entre lineas */
+    /* Delineaedo blanco */
+    text-shadow: 1px 3px 0 #fbfbfb;
+}
+
+.hero__text h3 {
+    font-family: 'Alfa Slab One', cursive;
+    font-weight: 400;
+    font-size: 3rem;
+    text-shadow: 1px 3px 0 #fbfbfb
+}
+
+.hero__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 3rem;
+    position: relative;
+}
+
+.hero__img img {
+   max-width: 400px;
+   filter: drop-shadow(0 0 0.75rem #FFDC9C);
+   -webkit-filter: drop-shadow(0 0 0.75rem #FFDC9C);
+}
+
+.sale {
+    position: absolute;
+    bottom: 3.5rem;
+    left: 4rem;
+    background-color: #de181e;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    padding: 1.4rem;
+    border: 2px dashed #fbfbfb;
+    outline: 8px solid #de181e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
+    z-index: 1;
+}
+
+.price,
+.only,
+.price small {
+    color: #fbfbfb;
+}
+
+.price {
+    font-size: 2.6rem;
+    font-weight: 300;
+    line-height: 1; /* Para que no haya espacio entre lineas */
+}
+
+.price small {
+    font-size: 1rem;
+    line-height: 1; /* Para que no haya espacio entre lineas */
+}
+
+.only {
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1; /* Para que no haya espacio entre lineas */
+    letter-spacing: 4px;
+}
+
+/************************* GRID *************************/
+
+.grid {
+    padding: 6rem;
+    /* Padding arriba y abajo */
+    padding-block: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "item1 item2"
+        "item1 item3";  /* Para organizar */
+    gap: 2rem;
+}
+
+.item1 {
+    grid-area: item1;
+    
+    background: url("../img/grid-small3.jpg");
+    height: 440px;
+}
+
+.item2 {
+    grid-area: item2;
+    background: url("../img/grid-small4.jpg");
+}
+
+.item3 {
+    grid-area: item3;
+    background: url("../img/grid-small6.jpg");  
+}
+
+.grid__item {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: .6rem;
+    -webkit-border-radius: .6rem;
+    -moz-border-radius: .6rem;
+    -ms-border-radius: .6rem;
+    -o-border-radius: .6rem;
+    padding: 2rem;
+}
+
+.grid__item h5,
+.grid__item h4 {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 300;
+    color: #fbfbfb;
+}
+
+.grid__item h5 {
+    font-size: 1.2rem;
+}
+
+.grid__item h4 {
+    font-size: 1.7rem;
+}
+
+/************************* ENJOY *************************/
+
+.enjoy {
+    padding: 6rem;
+    padding-block: 4rem;
+    background-image: url(../img/PRUEBA1.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.titles {
+    text-align: center;
+    padding-inline: 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.titles h4 {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 300;
+    background-color: #ffbf30;
+    padding: .5rem 1rem .25rem 1rem;
+}
+
+.titles h2 {
+    font-family: 'Alfa Slab One', cursive;
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 1; /* Para que no haya espacio entre lineas */
+    /* Delineaedo blanco */
+    text-shadow: 1px 3px 0 #fbfbfb;
+}
+
+.titles p {
+    font-family: 'Lato', sans-serif;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+
+.card img {
+    max-width: 100%;
+}
+
+.card h4 {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 300;
+    font-size: 1.6rem;
+}
+
+.card p {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    width: 75%;
+}
+
+.card a {
+    font-family: 'Alfa Slab One', cursive;
+    font-size: .6rem;
+    font-weight: 100;
+    letter-spacing: 1px;
+    background-color: #de181e;
+    color: #fbfbfb;
+    padding: .70rem 1rem;
+    text-decoration: none;
+}

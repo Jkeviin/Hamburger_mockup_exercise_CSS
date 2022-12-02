@@ -646,7 +646,9 @@ footer {
   background-repeat: no-repeat;
   padding: 3rem;
   padding-bottom: 1.6rem;
-  position: relative
+  position: relative;
+  /*bordearriba*/
+  border-top: 3px solid #ffbf30;
 }
 
 .footer::before {

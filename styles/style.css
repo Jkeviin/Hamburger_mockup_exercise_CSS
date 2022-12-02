@@ -1,302 +1,757 @@
-@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Lato&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Lato&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: #411e05;
-    /* Zoom navegador */
-    zoom: 105%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #411e05;
+  /* Zoom navegador */
+  zoom: 104%;
+}
+
+/* Cambiar scroll-bar */
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #411e05;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffbf30;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  /* Boxshadow izquierda */
+  box-shadow: inset 0 0 6px rgba(255, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #de181e;
 }
 
 .hero {
-    /* Quitar opacidad background */
-    background-image: url(../img/PRUEBA1.png);
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
+  /* Quitar opacidad background */
+  background-image: url(../img/PRUEBA1.png);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .hero__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem 2rem 0 2rem;  /* Sin padding BOTTOM */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2rem 0 2rem; /* Sin padding BOTTOM */
 }
 
 .hero__header .logo {
-    font-family: 'Bebas Neue', cursive;
-    font-weight: 300;
-    font-size: 2rem;
+  font-family: "Bebas Neue", cursive;
+  font-weight: 300;
+  font-size: 2.5rem;
 }
 
 .hero__header .logo i {
-    font-size: 2.5rem;
-    margin-right: 0.5rem;
+  font-size: 2.5rem;
+  margin-right: 0.5rem;
 }
 
 .header__right {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
 }
 
 .header__right p {
-    font-family: 'Lato', sans-serif;
-    font-weight: 600;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
 }
 
 .header__right p i {
-    margin-right: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .header__right .menu {
-    font-family: 'Bebas Neue', cursive;
-    font-weight: 300;
-    display: flex;
-    list-style: none;
-    font-size: 1.4rem;
-    gap: 2rem;
-    letter-spacing: 2px;
+  font-family: "Bebas Neue", cursive;
+  font-weight: 300;
+  display: flex;
+  list-style: none;
+  font-size: 1.4rem;
+  gap: 2rem;
+  letter-spacing: 2px;
 }
 
 .hero__main {
-    display: flex;
-    padding-inline: 6rem;
+  display: flex;
+  padding-inline: 6rem;
 }
 
 .hero__main > div {
-    flex: 1;  /* Para que se ajusten al 50% */
+  flex: 1; /* Para que se ajusten al 50% */
 }
 
 .hero__text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.hero__text h4{
-    font-family: 'Bebas Neue', cursive;
-    font-weight: 300;
-    font-size: 1.2rem;
-    border: 2px dashed #411e05;
-    width: max-content;  /* Para que se ajuste al texto */
-    padding: 0.5rem 1rem;
-    margin-bottom: 1rem;
+.hero__text h4 {
+  font-family: "Bebas Neue", cursive;
+  font-weight: 300;
+  font-size: 1.2rem;
+  border: 2px dashed #411e05;
+  width: max-content; /* Para que se ajuste al texto */
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
 }
 
 .hero__text h2 {
-    font-family: 'Alfa Slab One', cursive;
-    font-weight: 400;
-    font-size: 5rem;
-    line-height: 1; /* Para que no haya espacio entre lineas */
-    /* Delineaedo blanco */
-    text-shadow: 1px 3px 0 #fbfbfb;
+  font-family: "Alfa Slab One", cursive;
+  font-weight: 400;
+  font-size: 5rem;
+  line-height: 1; /* Para que no haya espacio entre lineas */
+  /* Delineaedo blanco */
+  text-shadow: 1px 3px 0 #fbfbfb;
 }
 
 .hero__text h3 {
-    font-family: 'Alfa Slab One', cursive;
-    font-weight: 400;
-    font-size: 3rem;
-    text-shadow: 1px 3px 0 #fbfbfb
+  font-family: "Alfa Slab One", cursive;
+  font-weight: 400;
+  font-size: 3rem;
+  text-shadow: 1px 3px 0 #fbfbfb;
 }
 
 .hero__img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-block: 3rem;
-    position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: 3rem;
+  position: relative;
 }
 
 .hero__img img {
-   max-width: 400px;
-   filter: drop-shadow(0 0 0.75rem #FFDC9C);
-   -webkit-filter: drop-shadow(0 0 0.75rem #FFDC9C);
+  max-width: 400px;
+  filter: drop-shadow(0 0 0.75rem #ffdc9c);
+  -webkit-filter: drop-shadow(0 0 0.75rem #ffdc9c);
 }
 
 .sale {
-    position: absolute;
-    bottom: 3.5rem;
-    left: 4rem;
-    background-color: #de181e;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    padding: 1.4rem;
-    border: 2px dashed #fbfbfb;
-    outline: 8px solid #de181e;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    font-family: 'Bebas Neue', cursive;
-    text-align: center;
-    z-index: 1;
+  position: absolute;
+  bottom: 3.5rem;
+  left: 4rem;
+  background-color: #de181e;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  padding: 1.4rem;
+  border: 2px dashed #fbfbfb;
+  outline: 8px solid #de181e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Bebas Neue", cursive;
+  text-align: center;
+  z-index: 1;
 }
 
 .price,
 .only,
 .price small {
-    color: #fbfbfb;
+  color: #fbfbfb;
 }
 
 .price {
-    font-size: 2.6rem;
-    font-weight: 300;
-    line-height: 1; /* Para que no haya espacio entre lineas */
+  font-size: 2.6rem;
+  font-weight: 300;
+  line-height: 1; /* Para que no haya espacio entre lineas */
 }
 
 .price small {
-    font-size: 1rem;
-    line-height: 1; /* Para que no haya espacio entre lineas */
+  font-size: 1.3rem;
+  line-height: 1; /* Para que no haya espacio entre lineas */
 }
 
 .only {
-    font-size: 1.4rem;
-    font-weight: 300;
-    line-height: 1; /* Para que no haya espacio entre lineas */
-    letter-spacing: 4px;
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1; /* Para que no haya espacio entre lineas */
+  letter-spacing: 4px;
 }
 
 /************************* GRID *************************/
 
 .grid {
-    padding: 6rem;
-    /* Padding arriba y abajo */
-    padding-block: 4rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-        "item1 item2"
-        "item1 item3";  /* Para organizar */
-    gap: 2rem;
+  padding: 6rem;
+  /* Padding arriba y abajo */
+  padding-block: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "item1 item2"
+    "item1 item3"; /* Para organizar */
+  gap: 2rem;
 }
 
 .item1 {
-    grid-area: item1;
-    
-    background: url("../img/grid-small3.jpg");
-    height: 440px;
+  grid-area: item1;
+
+  background: url("../img/grid-small3.jpg");
+  height: 440px;
 }
 
 .item2 {
-    grid-area: item2;
-    background: url("../img/grid-small4.jpg");
+  grid-area: item2;
+  background: url("../img/grid-small4.jpg");
 }
 
 .item3 {
-    grid-area: item3;
-    background: url("../img/grid-small6.jpg");  
+  grid-area: item3;
+  background: url("../img/grid-small6.jpg");
 }
 
 .grid__item {
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    border-radius: .6rem;
-    -webkit-border-radius: .6rem;
-    -moz-border-radius: .6rem;
-    -ms-border-radius: .6rem;
-    -o-border-radius: .6rem;
-    padding: 2rem;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 0.6rem;
+  -webkit-border-radius: 0.6rem;
+  -moz-border-radius: 0.6rem;
+  -ms-border-radius: 0.6rem;
+  -o-border-radius: 0.6rem;
+  padding: 2rem;
 }
 
 .grid__item h5,
 .grid__item h4 {
-    font-family: 'Bebas Neue', cursive;
-    font-weight: 300;
-    color: #fbfbfb;
+  font-family: "Bebas Neue", cursive;
+  font-weight: 300;
+  color: #fbfbfb;
 }
 
 .grid__item h5 {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 .grid__item h4 {
-    font-size: 1.7rem;
+  font-size: 1.7rem;
 }
 
 /************************* ENJOY *************************/
 
-.enjoy {
-    padding: 6rem;
-    padding-block: 4rem;
-    background-image: url(../img/PRUEBA1.png);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+.enjoy_container {
+  padding: 6rem;
+  padding-block: 4rem;
+  background-image: url(../img/PRUEBA1.png);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 0;
 }
 
+.enjoy_container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Gradient */
+  background-image: radial-gradient(circle, #ffffff6b, #fcecfb6b, #ffd6e56b, #ffc3be6b, #ffb78d6b, #f1a3726b, #e390566b, #d37e3a6b, #a5563b6b, #7037326b, #3a1e216b, #0000006b);
+  z-index: -1;
+}
+
+.enjoy {
+  z-index: 1;
+}
+
+
 .titles {
-    text-align: center;
-    padding-inline: 8rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+  text-align: center;
+  padding-inline: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 
 .titles h4 {
-    font-family: 'Bebas Neue', cursive;
-    font-weight: 300;
-    background-color: #ffbf30;
-    padding: .5rem 1rem .25rem 1rem;
+  font-family: "Bebas Neue", cursive;
+  font-weight: 300;
+  background-color: #ffbf30;
+  padding: 0.5rem 1rem 0.25rem 1rem;
 }
 
 .titles h2 {
-    font-family: 'Alfa Slab One', cursive;
-    font-weight: 400;
-    font-size: 3rem;
-    line-height: 1; /* Para que no haya espacio entre lineas */
-    /* Delineaedo blanco */
-    text-shadow: 1px 3px 0 #fbfbfb;
+  font-family: "Alfa Slab One", cursive;
+  font-weight: 400;
+  font-size: 3rem;
+  line-height: 1; /* Para que no haya espacio entre lineas */
+  /* Delineaedo blanco */
+  text-shadow: 1px 3px 0 #fbfbfb;
 }
 
 .titles p {
-    font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 .cards {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .card {
-    flex: 1;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: .5rem;
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .card img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 .card h4 {
-    font-family: 'Bebas Neue', cursive;
-    font-weight: 300;
-    font-size: 1.6rem;
+  font-family: "Bebas Neue", cursive;
+  font-weight: 300;
+  font-size: 1.6rem;
 }
 
 .card p {
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
-    width: 75%;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  width: 75%;
 }
 
 .card a {
-    font-family: 'Alfa Slab One', cursive;
-    font-size: .6rem;
-    font-weight: 100;
-    letter-spacing: 1px;
-    background-color: #de181e;
-    color: #fbfbfb;
-    padding: .70rem 1rem;
-    text-decoration: none;
+  font-family: "Alfa Slab One", cursive;
+  font-size: 0.6rem;
+  font-weight: 100;
+  letter-spacing: 1px;
+  background-color: #de181e;
+  color: #fbfbfb;
+  padding: 0.7rem 1rem;
+  text-decoration: none;
+}
+
+/************************* EVENTS *************************/
+
+.events {
+  padding: 6rem;
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+}
+
+.inner {
+  display: flex;
+  box-shadow: 15px 15px 40px #ccc; /* Sintaxis:  horizontal, vertical, blur, color */
+  overflow-x: auto;
+  scroll-behavior: smooth; /* Para que el scroll sea suave */
+  scroll-snap-type: x mandatory; /* Para que el scroll sea suave */
+}
+
+.inner .slide {
+  display: flex;
+  padding: 1.2rem;
+  min-width: 100%;
+  scroll-snap-align: start; /* Para que el scroll sea suave */
+}
+
+/* Cambiar scroll horizontal */
+.inner::-webkit-scrollbar {
+  height: 3px;
+}
+
+.inner::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+.inner::-webkit-scrollbar-thumb {
+  background: #ffbf30;
+}
+
+.inner::-webkit-scrollbar-thumb:hover {
+  background: #411e05;
+}
+
+.inner__left {
+  padding-block: 2rem; /* Padding arriba y abajo */
+  padding-right: 2rem;
+  padding-left: 1.5rem;
+  flex: 1;
+  position: relative;
+}
+
+.inner__left h5 {
+  font-family: "Bebas Neue", cursive;
+  font-weight: 300;
+  font-size: 1.6rem;
+  color: #393939;
+  letter-spacing: 0.8px;
+}
+
+.inner__left h3 {
+  font-family: "Alfa Slab One", cursive;
+  font-weight: 300;
+  font-size: 2.4rem;
+  line-height: 1; /* Para que no haya espacio entre lineas */
+  padding-bottom: 1.6rem;
+}
+
+.inner__left p {
+  font-family: "Lato", sans-serif;
+  color: #393939;
+  font-size: 1.2rem;
+  /* Espaciado vertical */
+  line-height: 1.6;
+}
+
+.inner__right {
+  flex: 1.25; /* Para que se divida el espacio */
+  min-width: 0; /* Para que no se rompa el diseño */
+}
+
+.inner__right img {
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.dots {
+  display: flex;
+  gap: 0.5rem;
+  position: absolute;
+  bottom: 1rem;
+  left: 1.5rem;
+}
+
+.dot {
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 50%;
+  background-color: #dddddd;
+
+  /* Quitar el outline */
+  outline: none;
+}
+
+.active {
+  background-color: #ffbf30;
+}
+
+/************************* RESERVATION *************************/
+
+.reservation {
+  padding: 6rem;
+  padding-top: 3rem;
+  padding-bottom: 10rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+
+  background-image:
+    url(../img/bg5.png),
+    url(../img/bg2.png),
+    url(../img/bg3.png);
+
+  background-size:
+    14%,
+    30%,
+    15%;
+
+  background-position:
+    12% 70%,
+    112% 110%,
+    -5%  -1%;
+
+  background-repeat: no-repeat;
+
+}
+
+.reservation__heading {
+  text-align: center;
+}
+
+.reservation__heading h5 {
+  font-family: "Bebas Neue", cursive;
+  font-weight: 300;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+}
+
+.reservation__heading h4 {
+  font-family: "Alfa Slab One", cursive;
+  font-weight: 300;
+  font-size: 2.5rem;
+  line-height: 1; /* Para que no haya espacio entre lineas */
+}
+
+.reservation__form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: center;
+  width: 36rem;
+  gap: 1rem;
+  padding-top: 2rem
+}
+
+.reservation__form .input-contain{
+  position: relative;
+  /* height va a ser lo del acutal mas 2px */
+  padding-top: 2px
+}
+
+.input-contain input{
+  padding: .9rem 1rem;
+  border: 1px solid #bfbfbf;
+  font-size: 1rem;
+  border-radius: .2rem;
+  -webkit-border-radius: .2rem;
+  -moz-border-radius: .2rem;
+  -ms-border-radius: .2rem;
+  -o-border-radius: .2rem;
+  width: 100%;
+  outline: none !important;
+  font-family: "Bebas Neue", cursive;
+  color: #393939;
+}
+
+.input-contain .placeholder-text{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 10px solid transparent;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+
+}
+
+.input-contain .placeholder-text .text{
+  font-family: "Bebas Neue", cursive;
+  font-weight: 300;
+  padding: 0 0.5rem;
+  background-color: transparent;
+  color: #5a5a5a;
+  font-size: 1rem;
+  transform: translate(0);
+  transition: transform 0.15s ease-out, font-size 0.15s ease-out, background-color 0.2s ease-out, color 0.15s ease-out;
+  -webkit-transition: transform 0.15s ease-out, font-size 0.15s ease-out, background-color 0.2s ease-out, color 0.15s ease-out;
+  -moz-transition: transform 0.15s ease-out, font-size 0.15s ease-out, background-color 0.2s ease-out, color 0.15s ease-out;
+  -ms-transition: transform 0.15s ease-out, font-size 0.15s ease-out, background-color 0.2s ease-out, color 0.15s ease-out;
+  -o-transition: transform 0.15s ease-out, font-size 0.15s ease-out, background-color 0.2s ease-out, color 0.15s ease-out;
+  -webkit-transform: translate(0);
+  -moz-transform: translate(0);
+  -ms-transform: translate(0);
+  -o-transform: translate(0);
+}
+
+.input-contain input:focus{
+  outline: none;
+  border-color: #411e05;
+  /* No agrandar */
+  box-shadow: 0 0 0 0;
+}
+
+
+input:focus + .placeholder-text .text, :not(input[value=""]) + .placeholder-text .text{
+  background-color: white;
+  font-size: .8rem;
+  transform: translate(-10%, -140%);
+  -webkit-transform: translate(-10%, -140%);
+  -moz-transform: translate(-10%, -140%);
+  -ms-transform: translate(-10%, -140%);
+  -o-transform: translate(-10%, -140%);
+  border-color: #411e05;
+  color: #411e05;
+}
+
+input:focus + .placeholder-text .text{
+  border-color: #411e05;
+  color: #411e05;
+}
+
+.reservation__form .input-contain input[type="date"]::-webkit-calendar-picker-indicator {
+    /*Cambiarcolorporcafe*/filter: invert(1);
+    border-radius: 50%;
+    padding: 4px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background-color: #bee1fa;
+    cursor: pointer;
+}
+
+.reservation__form .input-contain input[type="time"]::-webkit-calendar-picker-indicator {
+    /*Cambiarcolorporcafe*/filter: invert(1);
+    border-radius: 50%;
+    padding: 4px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background-color: #bee1fa;
+    cursor: pointer;
+}
+
+.reservation__form .input-contain input[type="button"] {
+  background-color: #de181e;
+  border: none;
+  color: #f8fafa;
+  font-family: "Alfa Slab One", cursive;
+  font-weight: 300;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.reservation__form .input-contain input[type="button"]:hover {
+  background-color: #ffbf30;
+  color: #393939;
+  cursor: pointer;
+}
+
+/************************* FOOTER *************************/
+
+footer {
+  padding: 6rem;
+  padding-top: 0;
+  padding-bottom: 2rem;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-image: url(../img/footer2.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 3rem;
+  padding-bottom: 1.6rem;
+  position: relative
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.644);
+}
+
+.footer__top,
+.footer__bottom {
+  z-index: 1;
+}
+
+.footer h2,
+.footer p {
+  color: #f6f7f7
+}
+
+.footer__top {
+  display: flex;
+  padding-block: 3rem;
+}
+
+.footer__top > div{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.addres {
+  align-items: flex-end;
+}
+
+.footer__top h2 {
+  font-family: "Bebas Neue", cursive;
+  font-weight: 300;
+  font-size: 3rem;
+  letter-spacing: 1px;
+}
+
+.footer__top h2 i {
+  color: #f6f7f7de;
+  margin-right: 0.5rem;
+}
+
+.footer__top p {
+  font-family: "lato", sans-serif;
+  font-weight: 300;
+  font-size: .9rem;
+  /* Espacio arriba y abajo  letras */
+  line-height: 1.3rem;
+}
+
+.addres p {
+  font-family: "Bebas Neue", cursive;
+  font-weight: 300;
+  font-size: 1.1rem;
+  letter-spacing: .8px;
+  line-height: 2rem;
+}
+
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 4rem;
+}
+
+.footer__bottom p {
+  font-family: "lato", sans-serif;
+  font-weight: 300;
+  font-size: .9rem;
+}
+
+.footer__bottom .icons {
+  display: flex;
+  gap: .5rem;
+}
+
+.footer__bottom .icons a {
+  background-color: rgba(255, 255, 255, 0.915);
+  /* Sea cuadrado adaptable al contenido*/
+  width: 22px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* quitar enlace */
+  text-decoration: none;
+}
+
+.footer__bottom .icons a i {
+  color: rgb(26, 26, 26);
+  /* quitar enlace */
+  text-decoration: none;
+  font-size: .8rem;
+}
+
+.footer__bottom .icons a:hover {
+  background-color: #ffbf30;
 }

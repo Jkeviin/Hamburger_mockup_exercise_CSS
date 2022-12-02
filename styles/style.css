@@ -62,6 +62,11 @@
   margin-right: 0.5rem;
 }
 
+.hero__header .logo i:hover {
+  color: white;
+  cursor: pointer;
+}
+
 .header__right {
   display: flex;
   flex-direction: column;
@@ -86,6 +91,24 @@
   font-size: 1.4rem;
   gap: 2rem;
   letter-spacing: 2px;
+}
+
+.header__right .menu li {
+  cursor: pointer;
+}
+
+.header__right .menu li::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #411e05;
+  transition: width 0.3s;
+}
+
+.header__right .menu li:hover::after {
+  width: 100%;
+  transition: width 0.3s;
 }
 
 .hero__main {
@@ -141,6 +164,40 @@
   max-width: 400px;
   filter: drop-shadow(0 0 0.75rem #ffdc9c);
   -webkit-filter: drop-shadow(0 0 0.75rem #ffdc9c);
+}
+
+.hero__img img:hover {
+  animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  transition: all 0.3s;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0) scale(1);
+    -webkit-transform: translateY(0) scale(1);
+    -moz-transform: translateY(0) scale(1);
+    -ms-transform: translateY(0) scale(1);
+    -o-transform: translateY(0) scale(1);
+}
+  40% {
+    transform: translateY(-15px) scale(1.02);
+    -webkit-transform: translateY(-15px) scale(1.02);
+    -moz-transform: translateY(-15px) scale(1.02);
+    -ms-transform: translateY(-15px) scale(1.02);
+    -o-transform: translateY(-15px) scale(1.02);
+}
+  60% {
+    transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -o-transform: translateY(-5px);
+}
 }
 
 .sale {
@@ -229,6 +286,19 @@
   -ms-border-radius: 0.6rem;
   -o-border-radius: 0.6rem;
   padding: 2rem;
+  transition: all 0.3s;
+}
+
+
+.grid__item:hover {
+  transform: scale(1.01);
+  -webkit-transform: scale(1.01);
+  -moz-transform: scale(1.01);
+  -ms-transform: scale(1.01);
+  -o-transform: scale(1.01);
+  transition: all 0.3s;
+
+  cursor: pointer;
 }
 
 .grid__item h5,
@@ -322,6 +392,16 @@
 
 .card img {
   max-width: 100%;
+  transition: all 0.3s;
+}
+
+.card img:hover {
+  transform: scale(1.06);
+  -webkit-transform: scale(1.06);
+  -moz-transform: scale(1.06);
+  -ms-transform: scale(1.06);
+  -o-transform: scale(1.06);
+  transition: all 0.3s;
 }
 
 .card h4 {
@@ -337,6 +417,7 @@
 }
 
 .card a {
+  margin-top: 1rem;
   font-family: "Alfa Slab One", cursive;
   font-size: 0.6rem;
   font-weight: 100;
@@ -345,6 +426,12 @@
   color: #fbfbfb;
   padding: 0.7rem 1rem;
   text-decoration: none;
+  /*Decoracion*/
+  border-radius: 0.4rem;
+  -webkit-border-radius: 0.6rem;
+  -moz-border-radius: 0.6rem;
+  -ms-border-radius: 0.6rem;
+  -o-border-radius: 0.6rem;
 }
 
 /************************* EVENTS *************************/
@@ -446,6 +533,10 @@
 
   /* Quitar el outline */
   outline: none;
+}
+
+.dot:hover {
+  background-color: #ffbf30;
 }
 
 .active {
@@ -735,16 +826,18 @@ footer {
 
 .footer__bottom .icons a {
   background-color: rgba(255, 255, 255, 0.915);
-  /* Sea cuadrado adaptable al contenido*/
-  width: 22px;
+  /*Seacuadradoadaptablealcontenido*/width: 22px;
   aspect-ratio: 1;
   border-radius: 50%;
-
   display: flex;
   justify-content: center;
   align-items: center;
-  /* quitar enlace */
-  text-decoration: none;
+  /*quitarenlace*/text-decoration: none;
+  transition: background-color 0.2s ease-out;
+  -webkit-transition: background-color 0.2s ease-out;
+  -moz-transition: background-color 0.2s ease-out;
+  -ms-transition: background-color 0.2s ease-out;
+  -o-transition: background-color 0.2s ease-out;
 }
 
 .footer__bottom .icons a i {
@@ -756,4 +849,9 @@ footer {
 
 .footer__bottom .icons a:hover {
   background-color: #ffbf30;
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
 }

@@ -1,7 +1,7 @@
 let scrollH = document.querySelector('.inner');
 
-const scroll = () => {
-
+/* Funcion para hacer scroll horizontal */
+const scroll2 = async () => {
 
     if ((Math.round(scrollH.scrollLeft) + 1) >= scrollH.scrollWidth - scrollH.clientWidth) {
         scrollH.scrollTo({
@@ -20,14 +20,18 @@ const scroll = () => {
         });  /* ScrollBy: desplazamiento relativo */
     }
 
+    /* Para que no se laguee */
+    await setTimeout(() => {
+        scroll2();
+    }
+        , 5000);
 }
 
-setInterval(scroll, 4000);
+scroll2();
 
 
 //////////
 let input_element = document.querySelectorAll("input");
-
 
 for (let i = 0; i < input_element.length; i++) {
     input_element[i].addEventListener("keyup", () => {

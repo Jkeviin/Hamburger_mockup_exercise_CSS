@@ -864,7 +864,6 @@ footer {
 /************************* MEDIA QUERIES *************************/
 
 @media screen and (max-width: 1200px ) {
-  
   .hero__img img {
     max-width: 100%;
   }
@@ -936,7 +935,6 @@ footer {
 
   .cards {
     flex-direction: column;
-    gap: 2rem;
   }
 
   .events {

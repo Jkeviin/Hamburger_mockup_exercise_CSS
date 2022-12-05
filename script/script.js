@@ -1,7 +1,8 @@
+// Path: script\script.js
 let scrollH = document.querySelector('.inner');
 
 /* Funcion para hacer scroll horizontal */
-const scroll2 = async () => {
+const scroll2 = () => {
 
     if ((Math.round(scrollH.scrollLeft) + 1) >= scrollH.scrollWidth - scrollH.clientWidth) {
         scrollH.scrollTo({
@@ -20,14 +21,30 @@ const scroll2 = async () => {
         });  /* ScrollBy: desplazamiento relativo */
     }
 
-    /* Para que no se laguee */
-    await setTimeout(() => {
-        scroll2();
-    }
-        , 5000);
+    setTimeout(() => {
+        requestAnimationFrame(scroll2);
+    }, 5000);
+
+
+
 }
 
 scroll2();
+
+/* PAra quitar el lag del setTimeout:
+
+    requestAnimationFrame(scroll2);
+
+    
+    requestAnimationFrame: es una funcion que se ejecuta cada vez que el navegador esta listo para pintar un nuevo frame en la pantalla.
+
+    requestAnimationFrame junto con SetTimeout:
+
+    setTimeout(() => {
+        requestAnimationFrame(scroll2);
+    }, 2000);
+
+*/
 
 
 //////////
